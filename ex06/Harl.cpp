@@ -6,12 +6,11 @@
 /*   By: iherman- <iherman-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 17:29:40 by iherman-          #+#    #+#             */
-/*   Updated: 2025/06/27 16:02:43 by iherman-         ###   ########.fr       */
+/*   Updated: 2025/06/27 16:09:04 by iherman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
-#include <map>
 #include <iostream>
 
 void	Harl::debug(void)
@@ -22,13 +21,15 @@ void	Harl::debug(void)
 
 void	Harl::info(void)
 {
-	std::cout << "[!] I cannot believe adding extra bacon costs more money. You didn't put enough bacon in my burger! If you did, I wouldn't be asking for more!" 
+	std::cout << "[!] I cannot believe adding extra bacon costs more money."
+				<< "You didn't put enough bacon in my burger! If you did, I wouldn't be asking for more!" 
 				<< std::endl;
 }
 
 void	Harl::warning(void)
 {
-	std::cout << "[!!] I think I deserve to have some extra bacon for free. I've been coming for years, whereas you started working here just last month."
+	std::cout << "[!!] I think I deserve to have some extra bacon for free."
+				<< " I've been coming for years, whereas you started working here just last month."
 				<< std::endl;
 }
 

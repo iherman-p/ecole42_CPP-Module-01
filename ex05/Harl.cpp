@@ -6,12 +6,11 @@
 /*   By: iherman- <iherman-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 17:29:40 by iherman-          #+#    #+#             */
-/*   Updated: 2025/06/27 16:03:07 by iherman-         ###   ########.fr       */
+/*   Updated: 2025/06/27 16:08:06 by iherman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
-#include <map>
 #include <iostream>
 
 void	Harl::debug(void)
