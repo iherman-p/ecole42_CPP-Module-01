@@ -6,7 +6,7 @@
 /*   By: iherman- <iherman-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 17:29:40 by iherman-          #+#    #+#             */
-/*   Updated: 2025/06/27 13:00:43 by iherman-         ###   ########.fr       */
+/*   Updated: 2025/06/27 16:02:43 by iherman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,15 +41,24 @@ void	Harl::error(void)
 /* Public */
 void	Harl::complain(std::string level)
 {
-	std::map<std::string, void (Harl::*)()> complaints;
-	complaints["DEBUG"] = &Harl::debug;
-	complaints["INFO"] = &Harl::info;
-	complaints["WARNING"] = &Harl::warning;
-	complaints["ERROR"] = &Harl::error;
-	
-	std::map<std::string, void (Harl::*)()>::iterator it = complaints.find(level);
-	if (it != complaints.end())
-		(this->*(it->second))();
-	else
+	const std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+    void (Harl::*complaints[])() = {
+        &Harl::debug,
+        &Harl::info,
+        &Harl::warning,
+        &Harl::error
+    };
+	int	i(0);
+
+	while (i < 4)
+	{
+		if (levels[i] == level)
+		{
+			(this->*complaints[i])();
+			break ;
+		}
+		i++;
+	}
+	if (i == 4)
 		std::cout << "[?] What are you saying? Stop mumbling, I can't understand you!" << std::endl;
 }

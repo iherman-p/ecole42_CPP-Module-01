@@ -6,7 +6,7 @@
 /*   By: iherman- <iherman-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 17:59:36 by iherman-          #+#    #+#             */
-/*   Updated: 2025/06/27 13:23:36 by iherman-         ###   ########.fr       */
+/*   Updated: 2025/06/27 16:05:16 by iherman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,33 +17,27 @@
 int main(int argc, char *argv[])
 {
 	Harl	best_friend;
-	std::map<std::string, int> complaints;
+	int		complaint_level(0);
+	const std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
 	if (argc != 2)
-	{
-		std::cout << "invalid use" << std::endl;
 		return (1);
-	}
-	complaints["DEBUG"] = 1;
-	complaints["INFO"] = 2;
-	complaints["WARNING"] = 3;
-	complaints["ERROR"] = 4;
-
-	std::map<std::string, int>::iterator it = complaints.find(std::string(argv[1]));
-	if (it == complaints.end())
+	while (complaint_level < 4 && levels[complaint_level].compare(std::string(argv[1])) != 0)
+		complaint_level++;
+	switch (complaint_level)
 	{
-		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
-		return (0);
-	}
-	switch (it->second)
-	{
-		case 1:
+		case 0:
 			best_friend.complain("DEBUG");
-		case 2:
+		case 1:
 			best_friend.complain("INFO");
-		case 3:
+		case 2:
 			best_friend.complain("WARNING");
-		case 4:
+		case 3:
+		{
 			best_friend.complain("ERROR");
+			break ;
+		}
+		default:
+			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 	}
 }
