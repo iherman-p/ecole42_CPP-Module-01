@@ -6,7 +6,7 @@
 /*   By: iherman- <iherman-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 10:58:39 by iherman-          #+#    #+#             */
-/*   Updated: 2025/06/25 11:28:23 by iherman-         ###   ########.fr       */
+/*   Updated: 2025/08/05 16:27:11 by iherman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,13 @@
 class Weapon
 {
 	private:
-		std::string type;
+		std::string _type;
+
 	public:
 		Weapon();
-		Weapon(std::string type);
+		Weapon(const std::string &type);
 		const std::string	&getType() const;
-		void				setType(std::string new_type);
+		void				setType(const std::string &new_type);
 };
 
 #endif // WEAPON_HPP

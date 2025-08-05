@@ -6,7 +6,7 @@
 /*   By: iherman- <iherman-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 10:57:02 by iherman-          #+#    #+#             */
-/*   Updated: 2025/06/27 16:13:02 by iherman-         ###   ########.fr       */
+/*   Updated: 2025/08/04 18:31:10 by iherman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ int main()
 		club.setType("some other type of club");
 		jim.attack();
 	}
-	return (0);
+	return 0;
 }

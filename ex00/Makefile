@@ -1,4 +1,4 @@
-NAME = BraiiiiiiinnnzzzZ
+NAME = test
 
 SRC = main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
 

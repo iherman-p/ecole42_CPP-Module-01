@@ -6,28 +6,28 @@
 /*   By: iherman- <iherman-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 10:58:37 by iherman-          #+#    #+#             */
-/*   Updated: 2025/06/25 11:48:16 by iherman-         ###   ########.fr       */
+/*   Updated: 2025/08/05 16:26:30 by iherman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 
 Weapon::Weapon()
+	: _type("random object")
 {
-
 }
 
-Weapon::Weapon(std::string type)
+Weapon::Weapon(const std::string &type)
+	: _type(type)
 {
-	this->type = type;
 }
 
 const std::string	&Weapon::getType() const
 {
-	return (type);
+	return _type;
 }
 
-void	Weapon::setType(std::string new_type)
+void	Weapon::setType(const std::string &new_type)
 {
-	type = new_type;
+	_type = new_type;
 }

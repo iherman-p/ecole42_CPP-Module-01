@@ -1,4 +1,4 @@
-NAME = HI_THIS_IS_BRAIN
+NAME = test
 
 SRC = main.cpp
 

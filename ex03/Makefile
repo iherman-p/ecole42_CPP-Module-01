@@ -1,4 +1,4 @@
-NAME = Unnecessary_violence
+NAME = test
 
 SRC = HumanA.cpp HumanB.cpp main.cpp Weapon.cpp
 

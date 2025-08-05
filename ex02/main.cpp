@@ -6,7 +6,7 @@
 /*   By: iherman- <iherman-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 10:48:41 by iherman-          #+#    #+#             */
-/*   Updated: 2025/06/25 10:55:57 by iherman-         ###   ########.fr       */
+/*   Updated: 2025/08/01 16:44:06 by iherman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ int	main()
 	std::string *stringPTR = &string;
 	std::string &stringREF = string;
 
-	std::cout << &string << std::endl
-				<< stringPTR << std::endl
+	std::cout << &string << '\n'
+				<< stringPTR << '\n'
 				<< &stringREF << std::endl;
 	
-	std::cout << string << std::endl
-				<< *stringPTR << std::endl
+	std::cout << string << '\n'
+				<< *stringPTR << '\n'
 				<< stringREF <<std::endl;
 }

@@ -6,11 +6,14 @@
 /*   By: iherman- <iherman-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 17:29:37 by iherman-          #+#    #+#             */
-/*   Updated: 2025/06/26 17:32:11 by iherman-         ###   ########.fr       */
+/*   Updated: 2025/08/05 17:55:56 by iherman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
+#ifndef HARL_HPP
+# define HARL_HPP
+
+# include <string>
 
 class Harl
 {
@@ -19,6 +22,9 @@ class Harl
 		void	info(void);
 		void	warning(void);
 		void	error(void);
+
 	public:
 		void	complain(std::string level);
 };
+
+#endif // HARL_HPP

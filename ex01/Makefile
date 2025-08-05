@@ -1,4 +1,4 @@
-NAME = MoarBrainz
+NAME = test
 
 SRC = main.cpp zombieHorde.cpp Zombie.cpp
 

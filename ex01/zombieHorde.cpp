@@ -6,7 +6,7 @@
 /*   By: iherman- <iherman-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 09:47:23 by iherman-          #+#    #+#             */
-/*   Updated: 2025/06/27 16:14:20 by iherman-         ###   ########.fr       */
+/*   Updated: 2025/08/05 16:02:40 by iherman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,11 @@
 Zombie* zombieHorde(int N, std::string name)
 {
 	Zombie *horde;
-	int		i(0);
 
 	if (N < 1)
-		return (NULL);
+		return NULL;
 	horde = new Zombie[N];
-	while (i < N)
-		horde[i++].setName(name);
-	return (horde);
+	for (int i(0); i < N; i++)
+		horde[i].setName(name);
+	return horde;
 }

@@ -6,17 +6,21 @@
 /*   By: iherman- <iherman-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 10:01:21 by iherman-          #+#    #+#             */
-/*   Updated: 2025/06/25 10:41:57 by iherman-         ###   ########.fr       */
+/*   Updated: 2025/08/05 16:18:50 by iherman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+#include "iostream"
 
 int	main()
 {
-	Zombie *horde = zombieHorde(14, "Paul");
+	Zombie *horde = zombieHorde(10, "Paul");
 	
-	for (int i = 0; i < 14; i++)
-		horde->announce();
-	delete[] horde;
+	if (horde)
+	{
+		for (int i = 0; i < 10; i++)
+			horde->announce();
+		delete[] horde;
+	}
 }
