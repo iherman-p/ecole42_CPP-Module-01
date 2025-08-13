@@ -6,7 +6,7 @@
 /*   By: iherman- <iherman-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 10:58:33 by iherman-          #+#    #+#             */
-/*   Updated: 2025/08/05 19:33:17 by iherman-         ###   ########.fr       */
+/*   Updated: 2025/08/13 16:14:06 by iherman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 class HumanB
 {
 	private:
-		std::string 	_name;
-		const Weapon	*_weapon;
+		std::string _name;
+		Weapon		*_weapon;
 
 	public:
 		HumanB(const std::string &name);
